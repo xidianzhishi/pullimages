@@ -27,10 +27,7 @@ jobs:
 
       - name: Run a multi-line scripts
         run: |
-          docker pull registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143
-          docker pull registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20220916-gd32f8c343@sha256:39c5b2e3310dc4264d638ad28d9d1d96c4cbb2b2dcfb52368fe4e3c63f61e10f
-          docker tag registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143 registry.cn-hangzhou.aliyuncs.com/registryk8simages/ingress-nginx-controller:v1.4.0
-          docker tag registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20220916-gd32f8c343@sha256:39c5b2e3310dc4264d638ad28d9d1d96c4cbb2b2dcfb52368fe4e3c63f61e10f registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v20220916
+          docker pull registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
+          docker tag registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2 registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v4.0.2
           docker login --username=${{ secrets.USR }} --password=${{ secrets.PSW }} registry.cn-hangzhou.aliyuncs.com
-          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/ingress-nginx-controller:v1.4.0
-          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v20220916
+          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v4.0.2
