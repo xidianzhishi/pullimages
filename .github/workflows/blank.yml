@@ -27,7 +27,7 @@ jobs:
 
       - name: Run a multi-line scripts
         run: |
-          docker pull registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
-          docker tag registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2 registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v4.0.2
+          docker pull ghcr.io/dexidp/dex:v2.36.0
+          docker tag ghcr.io/dexidp/dex:v2.36.0 registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v2.36.0
           docker login --username=${{ secrets.USR }} --password=${{ secrets.PSW }} registry.cn-hangzhou.aliyuncs.com
-          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v4.0.2
+          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v2.36.0
