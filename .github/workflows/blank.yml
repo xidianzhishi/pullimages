@@ -27,7 +27,8 @@ jobs:
 
       - name: Run a multi-line scripts
         run: |
-          docker pull ghcr.io/dexidp/dex:v2.36.0
-          docker tag ghcr.io/dexidp/dex:v2.36.0 registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v2.36.0
+          docker pull ghcr.io/dexidp/dex:v2.37.0
+          docker tag ghcr.io/dexidp/dex:v2.37.0 registry.cn-hangzhou.aliyuncs.com/registryk8simages/dexidp:v2.37.0
           docker login --username=${{ secrets.USR }} --password=${{ secrets.PSW }} registry.cn-hangzhou.aliyuncs.com
-          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/kube-webhook-certgen:v2.36.0
+          docker push registry.cn-hangzhou.aliyuncs.com/registryk8simages/dexidp:v2.37.0
+          
